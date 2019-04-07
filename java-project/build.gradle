@@ -1,0 +1,36 @@
+group 'info.garagesalesapp'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':json-display')
+}
+
+apply plugin: 'project-report'
+
+class ShowDate extends DefaultTask {
+
+    String dateMessage = "Date is: "
+
+    @TaskAction
+    void showDate() {
+        println dateMessage + new Date()
+    }
+}
+
+task showDate(type: ShowDate)
+
+task customShowDate(type: ShowDate) {
+    dateMessage = "Custom time is: "
+}
+
+
+

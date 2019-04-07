@@ -1,0 +1,12 @@
+group 'info.garagesalesapp'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+}
+
+
+
