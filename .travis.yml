@@ -15,8 +15,3 @@ cache:
 
 script:
   - ./gradlew build --scan -s
-
-notifications:
-  slack:
-    rooms:
-	  - zbit:bEz6jLfLjkk1uUUKwcudaVuW#gosc-nikhil
